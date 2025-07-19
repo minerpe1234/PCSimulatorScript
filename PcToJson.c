@@ -47,7 +47,7 @@ void convertToJson(FILE *input, FILE *output)
                 canChange = 0;
             }
 
-            fputc(byte, output);
+            fwrite(&byte, 1, 1, output);
             num = 0;
         }
         else
