@@ -66,5 +66,4 @@ int main()
         fclose(fp);
         fclose(out);
     }
-    free(filename);
 }
