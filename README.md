@@ -8,13 +8,9 @@ To build the program, first clone the repository:
 git clone https://github.com/minerpe1234/PCSimulatorScript.git
 cd PCSimulatorScript
 ```
-Create a build directory:
+Then compile the project using gcc or other c compiler:
 ```
-mkdir build && cd build
-```
-Then compile the project using CMake:
-```
-cmake .. && cmake --build .
+gcc main.c PcToJson.c -o PCSimulatorScript
 ```
 # ⚙️ How to Use
 The program has two modes:
@@ -30,4 +26,3 @@ You can find your .pc save files on Android at:
 Before converting your .json file back to .pc,
 make sure to remove all line breaks (\n) that were added during formatting.
 Leaving them in the file may cause the game to reject or crash on the save.
-
