@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <readline/readline.h>
-#include <readline/history.h>
 #include "PcToJson.h"
 
 int main()
 {
     int currentMode;
+    char filename[256];
     printf("Welcome to PC Simulator Script!\nChoose what do you want:\n");
     printf("1) Convert .pc to .json\n");
     printf("2) Convert .json to .pc\n");
@@ -17,11 +16,8 @@ int main()
         printf("Error: enter 1 or 2!");
         return 2;
     }
-    char *filename = readline("Your file name: ");
-    if (!filename || filename[0] == '\0') {
-        printf("Error: empty filename!\n");
-        return 3;
-    }
+    printf("Your file name: ");
+    scanf("%s", filename);
     if (currentMode == 1)
     {
         printf("Opening file...\n");
