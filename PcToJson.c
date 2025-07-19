@@ -71,6 +71,7 @@ void exportToPC(FILE *input, FILE *output)
     for (int i = 0; i < size * 2; i++)
     {
         byte = fgetc(input);
+        if (byte == '\r')continue;
         if (num == 0)
         {
             switch (byte)
